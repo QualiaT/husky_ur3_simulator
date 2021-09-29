@@ -1,0 +1,14 @@
+
+material product_2 {
+  receive_shadows on
+  technique {
+    pass {
+      ambient 1.0 1.0 1.0 1.0
+      diffuse 1.0 1.0 1.0 1.0
+      specular 0.5 0.5 0.5 1.0
+      lighting on
+      shading gouraud
+      texture_unit { texture MarkerData_2.png }
+    }
+  }
+}

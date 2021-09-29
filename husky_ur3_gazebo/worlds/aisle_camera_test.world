@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+<world name="aisle">
+
+
+<gui>
+  <camera name="camera">
+    <pose>3 -2 3.5 0.0 .85 2.4</pose>
+    <view_controller>orbit</view_controller>
+  </camera>
+</gui>
+<include><uri>model://sun</uri></include>
+<include><uri>model://ground_plane</uri></include>
+
+
+  
+    
+    
+  
+
+  <model name="bin_0_tag">
+    <static>true</static>
+    <pose>1.5 0.0 0.5 0 0 1.57</pose>
+    <link name="link">
+      <visual name="visual">
+        <geometry><box><size>0.2 0.01 0.2</size></box></geometry>
+        <material>
+          <script>
+            <uri>model://bin/tags</uri>
+            <!--<uri>model://bin/materials/textures</uri>-->
+            <name>product_0</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+
+  <model name="bin_1_tag">
+    <static>true</static>
+    <pose>3.0 0.2 0.65 0 0 1.57</pose>
+    <link name="link">
+      <visual name="visual">
+        <geometry><box><size>0.2 0.01 0.2</size></box></geometry>
+        <material>
+          <script>
+            <uri>model://bin/tags</uri>
+            <!--<uri>model://bin/materials/textures</uri>-->
+            <name>product_0</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>  
+
+  <model name="bin_2_tag">
+    <static>true</static>
+    <pose>4.5 0.3 0.7 0 0 1.57</pose>
+    <link name="link">
+      <visual name="visual">
+        <geometry><box><size>0.2 0.01 0.2</size></box></geometry>
+        <material>
+          <script>
+            <uri>model://bin/tags</uri>
+            <!--<uri>model://bin/materials/textures</uri>-->
+            <name>product_0</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>    
+
+  <model name="bin_3_tag">
+    <static>true</static>
+    <pose>6.0 -0.1 0.5 0 0 1.57</pose>
+    <link name="link">
+      <visual name="visual">
+        <geometry><box><size>0.2 0.01 0.2</size></box></geometry>
+        <material>
+          <script>
+            <uri>model://bin/tags</uri>
+            <!--<uri>model://bin/materials/textures</uri>-->
+            <name>product_0</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>   
+
+  <model name="bin_4_tag">
+    <static>true</static>
+    <pose>7.5 -0.3 0.6 0 0 1.57</pose>
+    <link name="link">
+      <visual name="visual">
+        <geometry><box><size>0.2 0.01 0.2</size></box></geometry>
+        <material>
+          <script>
+            <uri>model://bin/tags</uri>
+            <!--<uri>model://bin/materials/textures</uri>-->
+            <name>product_0</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>     
+  
+
+</world>
+</sdf>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="test_code" default="false"/>
+
+  <!-- Run the map server -->
+  <!--arg name="map_file" default="$(find husky_ur3_navigation)/map/gaitech_world.yaml"/-->
+  <arg name="map_file" default="$(find husky_ur3_navigation)/map/playpen_map.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+  <!--- Run AMCL -->
+  <include file="$(find husky_ur3_navigation)/launch/amcl.launch" />
+  <!--include file="$(find husky_ur3_navigation)/launch/amcl_test_code.launch" /-->
+
+  <!--- Run Move Base -->
+  <include file="$(find husky_ur3_navigation)/launch/move_base.launch" />
+  <!--include file="$(find husky_ur3_navigation)/launch/move_base_test_code.launch" /-->
+
+</launch>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <arg name="laser_enabled" default="true"/>
+  <arg name="camera_h_enabled" default="true"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find husky_ur3_gazebo)/worlds/test_world.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+  
+
+  <include file="$(find husky_ur3_gazebo)/launch/spawn_husky.launch">
+    <arg name="laser_enabled" value="$(arg laser_enabled)"/>
+    <arg name="camera_h_enabled" value="$(arg camera_h_enabled)"/>
+  </include>
+
+</launch>

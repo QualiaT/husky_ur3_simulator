@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<launch>
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find rh_p12_rn_gazebo)/config/position_controller.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node pkg="controller_manager" type="spawner" name="controller_spawner" respawn="false"
+        output="screen" ns="/rh_p12_rn" args="joint_state_controller
+                                              rh_p12_rn_position
+                                              rh_r2_position
+                                              rh_l1_position
+                                              rh_l2_position"/>
+</launch>
