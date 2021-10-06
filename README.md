@@ -56,6 +56,22 @@ $ cd ~/catkin_ws && catkin_make
 $ rospack profile && rosstack profile
 ```
 
+### Installation of dependencies for using gripper
+```
+- robotis_controller_msgs install
+$ git clone https://github.com/ROBOTIS-GIT/ROBOTIS-Framework-msgs.git
+
+- dynamixel_sdk install
+$ git clone -b melodic-devel https://github.com/ROBOTIS-GIT/DynamixelSDK.git
+
+- robotis_controller install
+$ git clone https://github.com/ROBOTIS-GIT/ROBOTIS-Framework.git
+
+- ros_controllers
+$ sudo apt-get install ros-melodic-ros-controllers
+```
+
+
 ## How to start?
 ```
 - Bring up Gazebo with the robot model
