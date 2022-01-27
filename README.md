@@ -33,10 +33,10 @@ $ sudo apt-get install ros-melodic-husky-navigation
 $ sudo apt-get install ros-melodic-moveit
 ```
 
-- For [ar_track_alvar package](https://github.com/ros-perception/ar_track_alvar) install
+- For [ar_track_alvar package](https://github.com/QualiaT/ar_track_alvar) install
 ```
 $ cd ~/catkin_ws/src
-$ git clone https://github.com/ros-perception/ar_track_alvar.git
+$ git clone -b melodic-devel https://github.com/QualiaT/ar_track_alvar.git
 $ cd ~/catkin_ws && catkin_make
 $ rospack profile && rosstack profile
 ```
@@ -46,9 +46,6 @@ $ rospack profile && rosstack profile
 $ cd ~/catkin_ws/src
 $ git clone https://github.com/QualiaT/husky_ur3_simulator.git
 
-$ cd ~/catkin_ws/src/husky_ur3_simulator/"add file"
-$ mv pr2_indiv_g_d435.launch ~/catkin_ws/src/ar_track_alvar/ar_track_alvar/launch
-$ mv pr2_indiv_h_d435.launch ~/catkin_ws/src/ar_track_alvar/ar_track_alvar/launch
 $ echo "export GAZEBO_MODEL_PATH=${HOME}/catkin_ws/src/husky_ur3_simulator/models" >> ~/.bashrc
 $ source ~/.bashrc
 
