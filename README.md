@@ -33,7 +33,6 @@ $ sudo apt-get install ros-noetic-imu-transformer
 - For [MoveIt](https://moveit.ros.org/) install
 ```
 $ sudo apt-get install ros-noetic-moveit
-$ sudo apt-get install ros-noetic-moveit-*
 ```
 
 - For [ar_track_alvar package](https://github.com/QualiaT/ar_track_alvar) install
