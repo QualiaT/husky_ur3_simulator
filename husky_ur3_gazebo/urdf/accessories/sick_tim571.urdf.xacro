@@ -45,7 +45,7 @@
 
   
   	
-    <sensor_sick_tim571_gazebo/>
+    <xacro:sensor_sick_tim571_gazebo/>
 		
   </xacro:macro>
   
@@ -59,7 +59,7 @@
 				<ray>
 					<scan>
 						<horizontal>
-							<samples>819</samples>
+							<samples>716</samples>
 							<resolution>1</resolution>
 							<min_angle>${min_angle}</min_angle>
 							<max_angle>${max_angle}</max_angle>

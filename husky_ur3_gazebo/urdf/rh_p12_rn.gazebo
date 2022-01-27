@@ -14,35 +14,45 @@
   <gazebo reference="rh_p12_rn_base">
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
-    <material>Gazebo/Grey</material>
+    <material>Gazebo/DarkGrey</material>
+    <minDepth>0.001</minDepth>  
+    <maxVel>0</maxVel>  
   </gazebo>
 
   <!-- rh_p12_rn_r1 -->
   <gazebo reference="rh_p12_rn_r1">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <material>Gazebo/Grey</material>
+    <mu1>15</mu1>
+    <mu2>150</mu2>
+    <material>Gazebo/DarkGrey</material>
+    <minDepth>0.001</minDepth>  
+    <maxVel>0</maxVel>  
   </gazebo>
 
   <!-- rh_p12_rn_r2 -->
   <gazebo reference="rh_p12_rn_r2">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <material>Gazebo/Grey</material>
+    <mu1>15</mu1>
+    <mu2>150</mu2>
+    <material>Gazebo/DarkGrey</material>
+    <minDepth>0.001</minDepth>  
+    <maxVel>0</maxVel>  
   </gazebo>
 
   <!-- rh_p12_rn_l1 -->
   <gazebo reference="rh_p12_rn_l1">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <material>Gazebo/Grey</material>
+    <mu1>15</mu1>
+    <mu2>150</mu2>
+    <material>Gazebo/DarkGrey</material>
+    <minDepth>0.001</minDepth>  
+    <maxVel>0</maxVel>  
   </gazebo>
 
   <!-- rh_p12_rn_l2 -->
   <gazebo reference="rh_p12_rn_l2">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
-    <material>Gazebo/Grey</material>
+    <mu1>15</mu1>
+    <mu2>150</mu2>
+    <material>Gazebo/DarkGrey</material>
+    <minDepth>0.001</minDepth>  
+    <maxVel>0</maxVel>  
   </gazebo>
 
 </robot>

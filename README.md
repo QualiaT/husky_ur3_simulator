@@ -1,15 +1,17 @@
-# husky_ur3_simulator
+# husky_ur3_simulator Noetic version
 
 ## Overview
 This is a mobile manipulator simulator package using Gazebo, RViz, MoveIt, move_base.
 
 The model of the mobile manipulator robot was created by combining Universal Robots's UR3 and Clearpath Robotics's Husky.
 
+This package is for ROS Noetic, but it also works normally in ROS Melodic.
 
 ### Author:
-- **[TaeHyeon Kim](https://github.com/QualiaT), qualiatxr@gmail.com**
-- **[Myunghyun Kim](https://github.com/kmh8667), kmh8667@khu.ac.kr**
 - **[SungWoo Yang](https://github.com/Sungwwoo), p1112007@khu.ac.kr**
+- **[TaeHyeon Kim](https://github.com/QualiaT), qualiatxr@gmail.com**
+
+**[SungWoo Yang](https://github.com/Sungwwoo) was in charge of the urdf version up, and [TaeHyeon Kim](https://github.com/QualiaT) modified the rest of some settings(navigation parameters, gazebo world files etc...).**
 
 **Affiliation: [Human-Robot Interaction LAB](https://khu-hri.weebly.com), Kyung Hee Unviersity, South Korea**
 
@@ -22,21 +24,22 @@ This software is built on the Robotic Operating System ([ROS](http://wiki.ros.or
 
 - For Husky mobile robot control & navigation install
 ```
-$ sudo apt-get install ros-melodic-husky-description
-$ sudo apt-get install ros-melodic-husky-gazebo
-$ sudo apt-get install ros-melodic-husky-viz
-$ sudo apt-get install ros-melodic-husky-navigation
+$ sudo apt-get install ros-noetic-husky-*
+$ sudo apt-get install ros-noetic-ddynamic-reconfigure
+$ sudo apt-get install ros-noetic-imu-filter-madgwick
+$ sudo apt-get install ros-noetic-imu-transformer
 ```
 
 - For [MoveIt](https://moveit.ros.org/) install
 ```
-$ sudo apt-get install ros-melodic-moveit
+$ sudo apt-get install ros-noetic-moveit
+$ sudo apt-get install ros-noetic-moveit-*
 ```
 
 - For [ar_track_alvar package](https://github.com/QualiaT/ar_track_alvar) install
 ```
 $ cd ~/catkin_ws/src
-$ git clone -b melodic-devel https://github.com/QualiaT/ar_track_alvar.git
+$ git clone -b noetic-devel https://github.com/QualiaT/ar_track_alvar.git
 $ cd ~/catkin_ws && catkin_make
 $ rospack profile && rosstack profile
 ```
@@ -44,7 +47,7 @@ $ rospack profile && rosstack profile
 ### husky_ur3_simulator install
 ```
 $ cd ~/catkin_ws/src
-$ git clone -b melodic-devel https://github.com/QualiaT/husky_ur3_simulator.git
+$ git clone -b noetic-devel https://github.com/QualiaT/husky_ur3_simulator.git
 
 $ echo "export GAZEBO_MODEL_PATH=${HOME}/catkin_ws/src/husky_ur3_simulator/models" >> ~/.bashrc
 $ source ~/.bashrc
@@ -59,15 +62,40 @@ $ rospack profile && rosstack profile
 $ git clone https://github.com/ROBOTIS-GIT/ROBOTIS-Framework-msgs.git
 
 - dynamixel_sdk install
-$ git clone -b melodic-devel https://github.com/ROBOTIS-GIT/DynamixelSDK.git
+$ git clone -b noetic-devel https://github.com/ROBOTIS-GIT/DynamixelSDK.git
 
 - robotis_controller install
 $ git clone https://github.com/ROBOTIS-GIT/ROBOTIS-Framework.git
 
 - ros_controllers
-$ sudo apt-get install ros-melodic-ros-controllers
+$ sudo apt-get install ros-noetic-ros-controllers
 ```
 
+### For Realsense SDK 2.0 Installation
+```
+$ sudo apt-key adv --keyserver keys.gnupg.net --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE
+$ sudo add-apt-repository "deb http://librealsense.intel.com/Debian/apt-repo focal main" -u
+
+$ sudo apt-get install librealsense2-dkms
+$ sudo apt-get install librealsense2-utils
+$ sudo apt-get install librealsense2-dev
+$ sudo apt-get install librealsense2-dbg
+
+# test
+$ realsense-viewer
+```
+
+### For Realsense ROS package Installation
+```
+$ export ROS_VER=noetic
+$ sudo apt-get install ros-noetic-realsense2-camera
+$ cd ~/catkin_ws/src/
+$ git clone https://github.com/IntelRealSense/realsense-ros.git
+$ cd realsense-ros/
+$ git checkout `git tag | sort -V | grep -P "^2.\d+\.\d+" | tail -1`
+$ cd ~/catkin_ws/
+$ catkin_make
+```
 
 ## How to start?
 ```
