@@ -44,7 +44,7 @@ $ rospack profile && rosstack profile
 ### husky_ur3_simulator install
 ```
 $ cd ~/catkin_ws/src
-$ git clone https://github.com/QualiaT/husky_ur3_simulator.git
+$ git clone -b melodic-devel https://github.com/QualiaT/husky_ur3_simulator.git
 
 $ echo "export GAZEBO_MODEL_PATH=${HOME}/catkin_ws/src/husky_ur3_simulator/models" >> ~/.bashrc
 $ source ~/.bashrc
