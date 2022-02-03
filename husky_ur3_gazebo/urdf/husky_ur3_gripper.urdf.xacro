@@ -29,20 +29,6 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
   <xacro:arg name="laser_xyz" default="$(optenv HUSKY_LMS1XX_XYZ 0.3206 0.0 -0.000635)" />
   <xacro:arg name="laser_rpy" default="$(optenv HUSKY_LMS1XX_RPY 0.0 0 0)" />
 
-  
- 
-  <!-- camera_h: decorations.urdf.xacro -->
-  <!-- camera_g: ur3_robot_gripper.urdf.xacro -->
-
-  <!--
-  <xacro:arg name="camera_h_enabled" default="true" />
-  <xacro:arg name="camera_g_enabled" default="true" />
-  <xacro:arg name="camera_h_xyz" default="$(optenv HUSKY_KINECT_XYZ 0.33 0 0.01)" />
-  <xacro:arg name="camera_h_rpy" default="$(optenv HUSKY_KINECT_RPY 0 -0.314 0)" />
-  <xacro:arg name="camera_g_xyz" default="$(optenv HUSKY_KINECT_XYZ 0 0 0.04)" />
-  <xacro:arg name="camera_g_rpy" default="$(optenv HUSKY_KINECT_RPY 0 0 0)" />
-  -->
-
   <xacro:property name="husky_front_bumper_extend" value="$(optenv HUSKY_FRONT_BUMPER_EXTEND 0)" />
   <xacro:property name="husky_rear_bumper_extend" value="$(optenv HUSKY_REAR_BUMPER_EXTEND 0)" />
 
