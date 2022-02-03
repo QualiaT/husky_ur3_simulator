@@ -29,9 +29,6 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
   <xacro:arg name="laser_xyz" default="$(optenv HUSKY_LMS1XX_XYZ 0.3206 0.0 -0.000635)" />
   <xacro:arg name="laser_rpy" default="$(optenv HUSKY_LMS1XX_RPY 0.0 0 0)" />
 
-  
- 
-
   <xacro:arg name="camera_h_enabled" default="false" />
   <xacro:arg name="camera_g_enabled" default="false" />
   <xacro:arg name="camera_h_xyz" default="$(optenv HUSKY_KINECT_XYZ 0 0 0)" />
@@ -192,31 +189,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
    	<origin xyz="$(arg laser_xyz)" rpy="$(arg laser_rpy)"/>
   </xacro:sensor_sick_tim571>
 
-  <!--<xacro:if value="$(arg camera_h_enabled)">
 
-    <xacro:sensor_arch prefix="" parent="top_plate_link">
-      <origin xyz="0.4 0 0.0" rpy="0 0.50 -3.14"/>
-    </xacro:sensor_arch>
-    <joint name="h_camera_joint" type="fixed">
-      <origin xyz="$(arg camera_h_xyz)" rpy="$(arg camera_h_rpy)" />
-      <parent link="top_plate_link"/>
-      <child link="h_camera_link"/>
-    </joint>
-
-    <xacro:h_sensor_d435 prefix="h_camera" robot_namespace="$(arg robot_namespace)"/>
-  </xacro:if>-->
-
-  <!--<xacro:if value="$(arg camera_g_enabeld)">
-
-    <joint name="g_camera_joint" type="fixed">
-      <origin xyz="$(arg camera_g_xyz)" rpy="$(arg camera_g_rpy)"/>
-      <parent link="ee_link"/>
-      <child link="g_camera_link"/>
-    </joint>
-
-    <xacro:g_sensor_d435 prefix="g_camera" robot_namespace="$(arg robot_namespace)"/>
-  </xacro:if>
--->
 
  <joint name="control_box_ur3_joint" type="fixed">
       <origin xyz="-0.095 0 0.233" rpy="${M_PI/2} 0 0" />
