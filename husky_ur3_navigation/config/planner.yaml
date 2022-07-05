@@ -13,9 +13,11 @@ TrajectoryPlannerROS:
   max_vel_x: 1.0
   min_vel_x: 0.0
 
-  max_vel_theta: 1.0
-  min_vel_theta: -1.0
-  min_in_place_vel_theta: 0.2
+  max_vel_theta: 0.7
+  min_vel_theta: -0.7
+  # default max_vel_theta/min_vel_theta: 1.0/-1.0
+  min_in_place_vel_theta: 0.5
+  # default min_in_place_vel_theta: 0.2
 
   holonomic_robot: false
   escape_vel: -0.1
@@ -59,6 +61,7 @@ DWAPlannerROS:
 
   max_vel_x: 0.5
   min_vel_x: 0.0
+  # default min_vel_x: 0.0
   max_vel_y: 0
   min_vel_y: 0
 
