@@ -38,10 +38,10 @@
         <joint name="wrist_3_joint" value="0" />
     </group_state>
     <group_state name="default" group="ur3_manipulator">
-        <joint name="elbow_joint" value="-2.54395" />
-        <joint name="shoulder_lift_joint" value="-1.192387" />
+        <joint name="elbow_joint" value="-2.44346" />
+        <joint name="shoulder_lift_joint" value="-1.11701" />
         <joint name="shoulder_pan_joint" value="0.253617" />
-        <joint name="wrist_1_joint" value="-2.547165" />
+        <joint name="wrist_1_joint" value="-2.72271" />
         <joint name="wrist_2_joint" value="0.25522" />
         <joint name="wrist_3_joint" value="-0.001" />
     </group_state>
